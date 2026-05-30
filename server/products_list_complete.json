@@ -1,0 +1,632 @@
+[
+  {
+    "_id": "6a140fd45ff5715a42cbb3df",
+    "name": "Classic Cotton T-Shirt",
+    "description": "Premium cotton t-shirt designed for everyday comfort and casual styling.",
+    "category": "Men T-Shirts",
+    "image": "/images/men/tshirts/classic-cotton-tshirt.jpg"
+  },
+  {
+    "_id": "6a140fd45ff5715a42cbb3e0",
+    "name": "Oversized Streetwear T-Shirt",
+    "description": "Relaxed fit oversized t-shirt inspired by modern street fashion trends.",
+    "category": "Men T-Shirts",
+    "image": "/images/men/tshirts/oversized-streetwear.jpg"
+  },
+  {
+    "_id": "6a140fd45ff5715a42cbb3e1",
+    "name": "Premium Crew Neck T-Shirt",
+    "description": "Soft premium crew neck t-shirt suitable for daily wear and layering.",
+    "category": "Men T-Shirts",
+    "image": "/images/men/tshirts/premium-crew-neck.jpg"
+  },
+  {
+    "_id": "6a140fd45ff5715a42cbb3e2",
+    "name": "Graphic Print T-Shirt",
+    "description": "Modern graphic print t-shirt with high-quality fabric and stylish design.",
+    "category": "Men T-Shirts",
+    "image": "/images/men/tshirts/graphic-print.jpg"
+  },
+  {
+    "_id": "6a140fd45ff5715a42cbb3e3",
+    "name": "Athletic Performance T-Shirt",
+    "description": "Lightweight moisture-wicking t-shirt built for workouts and active lifestyles.",
+    "category": "Men T-Shirts",
+    "image": "/images/men/tshirts/athletic-performance.jpg"
+  },
+  {
+    "_id": "6a14104f5ff5715a42cbb3e6",
+    "name": "Slim Fit Casual Shirt",
+    "description": "Modern slim fit casual shirt crafted from breathable cotton for everyday style and comfort.",
+    "category": "Men Shirts",
+    "image": "/images/men/shirts/slim-fit-casual-shirt.jpg"
+  },
+  {
+    "_id": "6a14104f5ff5715a42cbb3e7",
+    "name": "Checked Cotton Shirt",
+    "description": "Classic checked cotton shirt with a comfortable fit suitable for casual outings.",
+    "category": "Men Shirts",
+    "image": "/images/men/shirts/checked-cotton-shirt.jpg"
+  },
+  {
+    "_id": "6a14104f5ff5715a42cbb3e8",
+    "name": "Oxford Formal Shirt",
+    "description": "Premium Oxford formal shirt designed for office wear and professional occasions.",
+    "category": "Men Shirts",
+    "image": "/images/men/shirts/oxford-formal-shirt.jpg"
+  },
+  {
+    "_id": "6a14104f5ff5715a42cbb3e9",
+    "name": "Linen Summer Shirt",
+    "description": "Lightweight linen shirt that keeps you cool and stylish during warm weather.",
+    "category": "Men Shirts",
+    "image": "/images/men/shirts/linen-summer-shirt.jpg"
+  },
+  {
+    "_id": "6a14104f5ff5715a42cbb3ea",
+    "name": "Denim Casual Shirt",
+    "description": "Trendy denim casual shirt with durable fabric and a timeless look.",
+    "category": "Men Shirts",
+    "image": "/images/men/shirts/denim-casual-shirt.jpg"
+  },
+  {
+    "_id": "6a1410fc5ff5715a42cbb3ec",
+    "name": "Black Pullover Hoodie",
+    "description": "Premium fleece-lined pullover hoodie offering warmth, comfort, and a modern casual look.",
+    "category": "Men Hoodies",
+    "image": "/images/men/hoodies/black-pullover-hoodie.jpg"
+  },
+  {
+    "_id": "6a1410fc5ff5715a42cbb3ed",
+    "name": "Oversized Urban Hoodie",
+    "description": "Streetwear-inspired oversized hoodie crafted with soft cotton fabric for all-day comfort.",
+    "category": "Men Hoodies",
+    "image": "/images/men/hoodies/oversized-urban-hoodie.jpg"
+  },
+  {
+    "_id": "6a1410fc5ff5715a42cbb3ee",
+    "name": "Zip-Up Fleece Hoodie",
+    "description": "Versatile zip-up hoodie featuring warm fleece material and practical front pockets.",
+    "category": "Men Hoodies",
+    "image": "/images/men/hoodies/zip-up-fleece-hoodie.jpg"
+  },
+  {
+    "_id": "6a1410fc5ff5715a42cbb3ef",
+    "name": "Sports Training Hoodie",
+    "description": "Lightweight performance hoodie designed for workouts, running, and active lifestyles.",
+    "category": "Men Hoodies",
+    "image": "/images/men/hoodies/sports-training-hoodie.jpg"
+  },
+  {
+    "_id": "6a1410fc5ff5715a42cbb3f0",
+    "name": "Minimalist Grey Hoodie",
+    "description": "Clean minimalist hoodie with premium fabric, ideal for casual and everyday wear.",
+    "category": "Men Hoodies",
+    "image": "/images/men/hoodies/minimalist-grey-hoodie.jpg"
+  },
+  {
+    "_id": "6a14117e5ff5715a42cbb3f2",
+    "name": "Slim Fit Blue Jeans",
+    "description": "Modern slim-fit blue denim jeans designed for everyday comfort and versatile styling.",
+    "category": "Men Jeans",
+    "image": "/images/men/jeans/slim-fit-blue-jeans.jpg"
+  },
+  {
+    "_id": "6a14117e5ff5715a42cbb3f3",
+    "name": "Distressed Denim Jeans",
+    "description": "Trendy distressed denim jeans with a fashionable streetwear-inspired design.",
+    "category": "Men Jeans",
+    "image": "/images/men/jeans/distressed-denim-jeans.jpg"
+  },
+  {
+    "_id": "6a14117e5ff5715a42cbb3f4",
+    "name": "Regular Fit Dark Jeans",
+    "description": "Classic dark-wash regular-fit jeans offering durability and timeless appeal.",
+    "category": "Men Jeans",
+    "image": "/images/men/jeans/regular-fit-dark-jeans.jpg"
+  },
+  {
+    "_id": "6a14117e5ff5715a42cbb3f5",
+    "name": "Stretch Skinny Jeans",
+    "description": "Flexible stretch denim jeans providing a sleek fit and all-day comfort.",
+    "category": "Men Jeans",
+    "image": "/images/men/jeans/stretch-skinny-jeans.jpg"
+  },
+  {
+    "_id": "6a14117e5ff5715a42cbb3f6",
+    "name": "Vintage Wash Jeans",
+    "description": "Premium vintage-wash denim jeans with a stylish faded finish and relaxed fit.",
+    "category": "Men Jeans",
+    "image": "/images/men/jeans/vintage-wash-jeans.jpg"
+  },
+  {
+    "_id": "6a1411b55ff5715a42cbb3f8",
+    "name": "White Canvas Sneakers",
+    "description": "Classic white canvas sneakers featuring lightweight construction and everyday comfort.",
+    "category": "Men Footwear",
+    "image": "/images/men/footwear/white-canvas-sneakers.jpg"
+  },
+  {
+    "_id": "6a1411b55ff5715a42cbb3f9",
+    "name": "Running Sports Shoes",
+    "description": "High-performance running shoes designed with breathable mesh and superior cushioning.",
+    "category": "Men Footwear",
+    "image": "/images/men/footwear/running-sports-shoes.jpg"
+  },
+  {
+    "_id": "6a1411b55ff5715a42cbb3fa",
+    "name": "Leather Casual Shoes",
+    "description": "Premium leather casual shoes offering a sophisticated look and long-lasting comfort.",
+    "category": "Men Footwear",
+    "image": "/images/men/footwear/leather-casual-shoes.jpg"
+  },
+  {
+    "_id": "6a1411b55ff5715a42cbb3fb",
+    "name": "High-Top Sneakers",
+    "description": "Stylish high-top sneakers inspired by urban streetwear trends and modern fashion.",
+    "category": "Men Footwear",
+    "image": "/images/men/footwear/high-top-sneakers.jpg"
+  },
+  {
+    "_id": "6a1411b55ff5715a42cbb3fc",
+    "name": "Formal Derby Shoes",
+    "description": "Elegant formal derby shoes crafted for business meetings, events, and professional wear.",
+    "category": "Men Footwear",
+    "image": "/images/men/footwear/formal-derby-shoes.jpg"
+  },
+  {
+    "_id": "6a1411fa5ff5715a42cbb3fe",
+    "name": "Floral Printed Top",
+    "description": "Elegant floral printed top crafted from lightweight fabric for a stylish everyday look.",
+    "category": "Women Tops",
+    "image": "/images/women/tops/floral-printed-top.jpg"
+  },
+  {
+    "_id": "6a1411fa5ff5715a42cbb3ff",
+    "name": "Ribbed Crop Top",
+    "description": "Modern ribbed crop top designed for casual outings and contemporary fashion styling.",
+    "category": "Women Tops",
+    "image": "/images/women/tops/ribbed-crop-top.jpg"
+  },
+  {
+    "_id": "6a1411fa5ff5715a42cbb400",
+    "name": "Casual V-Neck Top",
+    "description": "Soft cotton V-neck top offering comfort, versatility, and a timeless appearance.",
+    "category": "Women Tops",
+    "image": "/images/women/tops/casual-vneck-top.jpg"
+  },
+  {
+    "_id": "6a1411fa5ff5715a42cbb401",
+    "name": "Elegant Office Blouse",
+    "description": "Professional office blouse with a sophisticated design suitable for formal occasions.",
+    "category": "Women Tops",
+    "image": "/images/women/tops/elegant-office-blouse.jpg"
+  },
+  {
+    "_id": "6a1411fa5ff5715a42cbb402",
+    "name": "Sleeveless Summer Top",
+    "description": "Breathable sleeveless top designed for warm weather and effortless everyday styling.",
+    "category": "Women Tops",
+    "image": "/images/women/tops/sleeveless-summer-top.jpg"
+  },
+  {
+    "_id": "6a1412195ff5715a42cbb404",
+    "name": "Floral Maxi Dress",
+    "description": "Elegant floral maxi dress crafted with lightweight fabric for casual outings and summer occasions.",
+    "category": "Women Dresses",
+    "image": "/images/women/dresses/floral-maxi-dress.jpg"
+  },
+  {
+    "_id": "6a1412195ff5715a42cbb405",
+    "name": "Black Evening Dress",
+    "description": "Sophisticated black evening dress designed for parties, dinners, and special events.",
+    "category": "Women Dresses",
+    "image": "/images/women/dresses/black-evening-dress.jpg"
+  },
+  {
+    "_id": "6a1412195ff5715a42cbb406",
+    "name": "Casual Shirt Dress",
+    "description": "Comfortable shirt dress featuring a relaxed silhouette and versatile everyday styling.",
+    "category": "Women Dresses",
+    "image": "/images/women/dresses/casual-shirt-dress.jpg"
+  },
+  {
+    "_id": "6a1412195ff5715a42cbb407",
+    "name": "Party Wear Mini Dress",
+    "description": "Trendy mini dress with modern detailing, perfect for celebrations and social gatherings.",
+    "category": "Women Dresses",
+    "image": "/images/women/dresses/party-wear-mini-dress.jpg"
+  },
+  {
+    "_id": "6a1412195ff5715a42cbb408",
+    "name": "Elegant Midi Dress",
+    "description": "Premium midi dress offering timeless elegance, comfort, and refined styling.",
+    "category": "Women Dresses",
+    "image": "/images/women/dresses/elegant-midi-dress.jpg"
+  },
+  {
+    "_id": "6a1412345ff5715a42cbb40a",
+    "name": "High Waist Jeans",
+    "description": "Premium high-waist denim jeans designed to provide a flattering fit and all-day comfort.",
+    "category": "Women Jeans",
+    "image": "/images/women/jeans/high-waist-jeans.jpg"
+  },
+  {
+    "_id": "6a1412345ff5715a42cbb40b",
+    "name": "Skinny Fit Denim",
+    "description": "Stretchable skinny-fit jeans crafted for a sleek silhouette and modern styling.",
+    "category": "Women Jeans",
+    "image": "/images/women/jeans/skinny-fit-denim.jpg"
+  },
+  {
+    "_id": "6a1412345ff5715a42cbb40c",
+    "name": "Wide Leg Jeans",
+    "description": "Fashion-forward wide-leg denim jeans offering comfort, movement, and effortless style.",
+    "category": "Women Jeans",
+    "image": "/images/women/jeans/wide-leg-jeans.jpg"
+  },
+  {
+    "_id": "6a1412345ff5715a42cbb40d",
+    "name": "Distressed Fashion Jeans",
+    "description": "Trendy distressed jeans with contemporary detailing for casual and streetwear-inspired outfits.",
+    "category": "Women Jeans",
+    "image": "/images/women/jeans/distressed-fashion-jeans.jpg"
+  },
+  {
+    "_id": "6a1412345ff5715a42cbb40e",
+    "name": "Classic Straight Jeans",
+    "description": "Timeless straight-fit denim jeans offering versatility, durability, and everyday comfort.",
+    "category": "Women Jeans",
+    "image": "/images/women/jeans/classic-straight-jeans.jpg"
+  },
+  {
+    "_id": "6a14124f5ff5715a42cbb410",
+    "name": "Designer Kurti",
+    "description": "Elegant designer kurti crafted with premium fabric and intricate patterns for festive and casual occasions.",
+    "category": "Women Ethnic Wear",
+    "image": "/images/women/ethnic/designer-kurti.jpg"
+  },
+  {
+    "_id": "6a14124f5ff5715a42cbb411",
+    "name": "Cotton Kurta Set",
+    "description": "Comfortable cotton kurta set featuring matching bottoms, perfect for daily wear and celebrations.",
+    "category": "Women Ethnic Wear",
+    "image": "/images/women/ethnic/cotton-kurta-set.jpg"
+  },
+  {
+    "_id": "6a14124f5ff5715a42cbb412",
+    "name": "Anarkali Suit",
+    "description": "Traditional Anarkali suit designed with graceful flair and detailed embroidery for special occasions.",
+    "category": "Women Ethnic Wear",
+    "image": "/images/women/ethnic/anarkali-suit.jpg"
+  },
+  {
+    "_id": "6a14124f5ff5715a42cbb413",
+    "name": "Printed Palazzo Set",
+    "description": "Stylish printed palazzo set combining comfort and ethnic elegance for modern fashion lovers.",
+    "category": "Women Ethnic Wear",
+    "image": "/images/women/ethnic/printed-palazzo-set.jpg"
+  },
+  {
+    "_id": "6a14124f5ff5715a42cbb414",
+    "name": "Festival Wear Saree",
+    "description": "Premium festive saree featuring rich fabric and elegant design suitable for weddings and celebrations.",
+    "category": "Women Ethnic Wear",
+    "image": "/images/women/ethnic/festival-wear-saree.jpg"
+  },
+  {
+    "_id": "6a14128d5ff5715a42cbb416",
+    "name": "Casual Sneakers",
+    "description": "Comfortable casual sneakers designed with lightweight materials for everyday fashion and all-day wear.",
+    "category": "Women Footwear",
+    "image": "/images/women/footwear/casual-sneakers.jpg"
+  },
+  {
+    "_id": "6a14128d5ff5715a42cbb417",
+    "name": "Block Heel Sandals",
+    "description": "Elegant block heel sandals combining style, comfort, and stability for parties and formal occasions.",
+    "category": "Women Footwear",
+    "image": "/images/women/footwear/block-heel-sandals.jpg"
+  },
+  {
+    "_id": "6a14128d5ff5715a42cbb418",
+    "name": "Comfort Flats",
+    "description": "Soft cushioned flats crafted for daily comfort, office wear, and casual outings.",
+    "category": "Women Footwear",
+    "image": "/images/women/footwear/comfort-flats.jpg"
+  },
+  {
+    "_id": "6a14128d5ff5715a42cbb419",
+    "name": "Party Heels",
+    "description": "Premium party heels featuring a sophisticated design that elevates any special occasion outfit.",
+    "category": "Women Footwear",
+    "image": "/images/women/footwear/party-heels.jpg"
+  },
+  {
+    "_id": "6a14128d5ff5715a42cbb41a",
+    "name": "Ankle Boots",
+    "description": "Fashionable ankle boots crafted from premium materials for a bold and stylish appearance.",
+    "category": "Women Footwear",
+    "image": "/images/women/footwear/ankle-boots.jpg"
+  },
+  {
+    "_id": "6a1412b95ff5715a42cbb41c",
+    "name": "Printed Kids T-Shirt",
+    "description": "Comfortable cotton t-shirt featuring colorful prints designed for active and playful boys.",
+    "category": "Kids Boys Wear",
+    "image": "/images/kids/boys/printed-kids-tshirt.jpg"
+  },
+  {
+    "_id": "6a1412b95ff5715a42cbb41d",
+    "name": "Kids Denim Shirt",
+    "description": "Stylish denim shirt made from soft fabric, perfect for casual outings and family events.",
+    "category": "Kids Boys Wear",
+    "image": "/images/kids/boys/kids-denim-shirt.jpg"
+  },
+  {
+    "_id": "6a1412b95ff5715a42cbb41e",
+    "name": "Sports Hoodie",
+    "description": "Lightweight sports hoodie designed to keep kids warm while allowing comfortable movement.",
+    "category": "Kids Boys Wear",
+    "image": "/images/kids/boys/sports-hoodie.jpg"
+  },
+  {
+    "_id": "6a1412b95ff5715a42cbb41f",
+    "name": "Cotton Shorts Set",
+    "description": "Breathable cotton shorts set ideal for everyday wear, outdoor play, and summer activities.",
+    "category": "Kids Boys Wear",
+    "image": "/images/kids/boys/cotton-shorts-set.jpg"
+  },
+  {
+    "_id": "6a1412b95ff5715a42cbb420",
+    "name": "Festival Kurta Set",
+    "description": "Traditional kurta set crafted for festivals, celebrations, and special family occasions.",
+    "category": "Kids Boys Wear",
+    "image": "/images/kids/boys/festival-kurta-set.jpg"
+  },
+  {
+    "_id": "6a1412d45ff5715a42cbb422",
+    "name": "Princess Party Dress",
+    "description": "Beautiful princess-style party dress designed with soft fabric and elegant detailing for special occasions.",
+    "category": "Kids Girls Wear",
+    "image": "/images/kids/girls/princess-party-dress.jpg"
+  },
+  {
+    "_id": "6a1412d45ff5715a42cbb423",
+    "name": "Floral Summer Dress",
+    "description": "Lightweight floral summer dress crafted for comfort, style, and everyday outdoor activities.",
+    "category": "Kids Girls Wear",
+    "image": "/images/kids/girls/floral-summer-dress.jpg"
+  },
+  {
+    "_id": "6a1412d45ff5715a42cbb424",
+    "name": "Girls Denim Jacket",
+    "description": "Fashionable denim jacket with a comfortable fit, perfect for layering during cool weather.",
+    "category": "Kids Girls Wear",
+    "image": "/images/kids/girls/girls-denim-jacket.jpg"
+  },
+  {
+    "_id": "6a1412d45ff5715a42cbb425",
+    "name": "Cute Top & Skirt Set",
+    "description": "Matching top and skirt set designed with playful patterns and premium comfort.",
+    "category": "Kids Girls Wear",
+    "image": "/images/kids/girls/cute-top-skirt-set.jpg"
+  },
+  {
+    "_id": "6a1412d45ff5715a42cbb426",
+    "name": "Traditional Ethnic Dress",
+    "description": "Elegant ethnic dress crafted for cultural events, festivals, and family celebrations.",
+    "category": "Kids Girls Wear",
+    "image": "/images/kids/girls/traditional-ethnic-dress.jpg"
+  },
+  {
+    "_id": "6a1412f55ff5715a42cbb428",
+    "name": "Kids Sports Shoes",
+    "description": "Lightweight sports shoes designed for active kids, providing comfort, flexibility, and durability.",
+    "category": "Kids Footwear",
+    "image": "/images/kids/footwear/kids-sports-shoes.jpg"
+  },
+  {
+    "_id": "6a1412f55ff5715a42cbb429",
+    "name": "Cartoon Sneakers",
+    "description": "Fun cartoon-themed sneakers featuring colorful designs that kids love to wear every day.",
+    "category": "Kids Footwear",
+    "image": "/images/kids/footwear/cartoon-sneakers.jpg"
+  },
+  {
+    "_id": "6a1412f55ff5715a42cbb42a",
+    "name": "Casual Sandals",
+    "description": "Comfortable casual sandals with adjustable straps, perfect for outdoor activities and summer outings.",
+    "category": "Kids Footwear",
+    "image": "/images/kids/footwear/casual-sandals.jpg"
+  },
+  {
+    "_id": "6a1412f55ff5715a42cbb42b",
+    "name": "School Shoes",
+    "description": "Durable school shoes crafted for daily wear, offering comfort and long-lasting performance.",
+    "category": "Kids Footwear",
+    "image": "/images/kids/footwear/school-shoes.jpg"
+  },
+  {
+    "_id": "6a1412f55ff5715a42cbb42c",
+    "name": "Slip-On Shoes",
+    "description": "Easy-to-wear slip-on shoes with soft cushioning and a lightweight design for everyday comfort.",
+    "category": "Kids Footwear",
+    "image": "/images/kids/footwear/slip-on-shoes.jpg"
+  },
+  {
+    "_id": "6a1413195ff5715a42cbb42e",
+    "name": "Classic Analog Watch",
+    "description": "Premium analog watch featuring a stainless steel case and timeless design for everyday elegance.",
+    "category": "Men Accessories",
+    "image": "/images/men/accessories/watches/classic-analog-watch.jpg"
+  },
+  {
+    "_id": "6a1413195ff5715a42cbb42f",
+    "name": "Sports Digital Watch",
+    "description": "Modern digital sports watch with water resistance, stopwatch, and fitness-friendly features.",
+    "category": "Men Accessories",
+    "image": "/images/men/accessories/watches/sports-digital-watch.jpg"
+  },
+  {
+    "_id": "6a1413195ff5715a42cbb430",
+    "name": "Premium Leather Wallet",
+    "description": "Genuine leather wallet offering multiple card slots, durability, and a sophisticated appearance.",
+    "category": "Men Accessories",
+    "image": "/images/men/accessories/wallets/premium-leather-wallet.jpg"
+  },
+  {
+    "_id": "6a1413195ff5715a42cbb431",
+    "name": "RFID Slim Wallet",
+    "description": "Compact RFID-blocking wallet designed for security, convenience, and modern lifestyles.",
+    "category": "Men Accessories",
+    "image": "/images/men/accessories/wallets/rfid-slim-wallet.jpg"
+  },
+  {
+    "_id": "6a1413195ff5715a42cbb432",
+    "name": "Formal Leather Belt",
+    "description": "Classic formal leather belt crafted from premium materials for business and formal attire.",
+    "category": "Men Accessories",
+    "image": "/images/men/accessories/belts/formal-leather-belt.jpg"
+  },
+  {
+    "_id": "6a1413195ff5715a42cbb433",
+    "name": "Casual Canvas Belt",
+    "description": "Comfortable canvas belt featuring an adjustable buckle and versatile casual styling.",
+    "category": "Men Accessories",
+    "image": "/images/men/accessories/belts/casual-canvas-belt.jpg"
+  },
+  {
+    "_id": "6a1413195ff5715a42cbb434",
+    "name": "Aviator Sunglasses",
+    "description": "Classic aviator sunglasses with UV protection and a stylish lightweight frame.",
+    "category": "Men Accessories",
+    "image": "/images/men/accessories/sunglasses/aviator-sunglasses.jpg"
+  },
+  {
+    "_id": "6a1413195ff5715a42cbb435",
+    "name": "Wayfarer Sunglasses",
+    "description": "Modern wayfarer sunglasses featuring premium lenses and a timeless fashion statement.",
+    "category": "Men Accessories",
+    "image": "/images/men/accessories/sunglasses/wayfarer-sunglasses.jpg"
+  },
+  {
+    "_id": "6a1413195ff5715a42cbb436",
+    "name": "Laptop Backpack",
+    "description": "Spacious laptop backpack with multiple compartments for work, travel, and daily use.",
+    "category": "Men Accessories",
+    "image": "/images/men/accessories/bags/laptop-backpack.jpg"
+  },
+  {
+    "_id": "6a1413195ff5715a42cbb437",
+    "name": "Travel Duffel Bag",
+    "description": "Premium travel duffel bag offering large storage capacity and durable construction.",
+    "category": "Men Accessories",
+    "image": "/images/men/accessories/bags/travel-duffel-bag.jpg"
+  },
+  {
+    "_id": "6a1413385ff5715a42cbb439",
+    "name": "Designer Tote Bag",
+    "description": "Premium designer tote bag featuring spacious compartments and a sophisticated everyday style.",
+    "category": "Women Accessories",
+    "image": "/images/women/accessories/handbags/designer-tote-bag.jpg"
+  },
+  {
+    "_id": "6a1413385ff5715a42cbb43a",
+    "name": "Elegant Crossbody Bag",
+    "description": "Stylish crossbody bag crafted for comfort, convenience, and modern fashion enthusiasts.",
+    "category": "Women Accessories",
+    "image": "/images/women/accessories/handbags/elegant-crossbody-bag.jpg"
+  },
+  {
+    "_id": "6a1413385ff5715a42cbb43b",
+    "name": "Rose Gold Watch",
+    "description": "Elegant rose gold wristwatch designed to complement both casual and formal outfits.",
+    "category": "Women Accessories",
+    "image": "/images/women/accessories/watches/rose-gold-watch.jpg"
+  },
+  {
+    "_id": "6a1413385ff5715a42cbb43c",
+    "name": "Minimal Fashion Watch",
+    "description": "Minimalist watch featuring a sleek dial and premium finish for timeless elegance.",
+    "category": "Women Accessories",
+    "image": "/images/women/accessories/watches/minimal-fashion-watch.jpg"
+  },
+  {
+    "_id": "6a1413385ff5715a42cbb43d",
+    "name": "Pearl Necklace Set",
+    "description": "Luxury pearl necklace set crafted for weddings, celebrations, and elegant occasions.",
+    "category": "Women Accessories",
+    "image": "/images/women/accessories/jewelry/pearl-necklace-set.jpg"
+  },
+  {
+    "_id": "6a1413385ff5715a42cbb43e",
+    "name": "Elegant Bracelet",
+    "description": "Premium bracelet featuring refined craftsmanship and a sophisticated appearance.",
+    "category": "Women Accessories",
+    "image": "/images/women/accessories/jewelry/elegant-bracelet.jpg"
+  },
+  {
+    "_id": "6a1413385ff5715a42cbb43f",
+    "name": "Cat Eye Sunglasses",
+    "description": "Fashion-forward cat eye sunglasses with UV protection and a glamorous design.",
+    "category": "Women Accessories",
+    "image": "/images/women/accessories/sunglasses/cat-eye-sunglasses.jpg"
+  },
+  {
+    "_id": "6a1413385ff5715a42cbb440",
+    "name": "Oversized Fashion Shades",
+    "description": "Oversized sunglasses designed for modern fashion trends and maximum sun protection.",
+    "category": "Women Accessories",
+    "image": "/images/women/accessories/sunglasses/oversized-fashion-shades.jpg"
+  },
+  {
+    "_id": "6a1413385ff5715a42cbb441",
+    "name": "Pearl Hair Clips",
+    "description": "Elegant pearl hair clips designed to add charm and sophistication to any hairstyle.",
+    "category": "Women Accessories",
+    "image": "/images/women/accessories/hair/pearl-hair-clips.jpg"
+  },
+  {
+    "_id": "6a1413385ff5715a42cbb442",
+    "name": "Premium Scrunchie Set",
+    "description": "Soft premium scrunchie collection crafted with high-quality fabric and stylish colors.",
+    "category": "Women Accessories",
+    "image": "/images/women/accessories/hair/premium-scrunchie-set.jpg"
+  },
+  {
+    "_id": "6a1413695ff5715a42cbb444",
+    "name": "School Backpack",
+    "description": "Durable school backpack featuring multiple compartments, comfortable straps, and colorful kid-friendly design.",
+    "category": "Kids Accessories",
+    "image": "/images/kids/accessories/school-backpack.jpg"
+  },
+  {
+    "_id": "6a1413695ff5715a42cbb445",
+    "name": "Cartoon Water Bottle",
+    "description": "Leak-proof cartoon-themed water bottle designed for school, travel, and everyday hydration.",
+    "category": "Kids Accessories",
+    "image": "/images/kids/accessories/cartoon-water-bottle.jpg"
+  },
+  {
+    "_id": "6a1413695ff5715a42cbb446",
+    "name": "Kids Smart Watch",
+    "description": "Feature-rich smart watch for kids with activity tracking, alarm functions, and playful design.",
+    "category": "Kids Accessories",
+    "image": "/images/kids/accessories/kids-smart-watch.jpg"
+  },
+  {
+    "_id": "6a1413695ff5715a42cbb447",
+    "name": "Cartoon Cap",
+    "description": "Lightweight adjustable cap featuring colorful cartoon prints for outdoor activities and casual wear.",
+    "category": "Kids Accessories",
+    "image": "/images/kids/accessories/cartoon-cap.jpg"
+  },
+  {
+    "_id": "6a1413695ff5715a42cbb448",
+    "name": "Kids Sunglasses",
+    "description": "UV-protected sunglasses designed specifically for children with lightweight and comfortable frames.",
+    "category": "Kids Accessories",
+    "image": "/images/kids/accessories/kids-sunglasses.jpg"
+  }
+]
