@@ -1,6 +1,7 @@
 import axios from "axios";
+import { API_BASE_URL } from "../utils/config";
 
-const API_URL = "http://localhost:5000/api/payments";
+const API_URL = `${API_BASE_URL}/api/payments`;
 
 export const createPaymentOrder = async (amount) => {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));

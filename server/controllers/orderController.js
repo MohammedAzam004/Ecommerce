@@ -6,16 +6,25 @@ const placeOrder = async (req, res) => {
         const {
             orderItems,
             shippingAddress,
-            totalPrice,
             paymentMethod,
             razorpay_order_id,
             razorpay_payment_id,
             razorpay_signature,
         } = req.body;
 
-        // 1. Verify requested quantities do not exceed available stock and stock does not become negative
+        if (!orderItems || orderItems.length === 0) {
+            return res.status(400).json({ message: "No order items provided" });
+        }
+        if (!shippingAddress || !shippingAddress.address) {
+            return res.status(400).json({ message: "Shipping address is required" });
+        }
+
+        // 1. Validate stock AND fetch real prices from DB in a single pass
+        const productDocs = [];
         for (const item of orderItems) {
-            const product = await Product.findById(item.product || item._id);
+            const productId = item.product || item._id;
+            const product = await Product.findById(productId);
+
             if (!product) {
                 return res.status(404).json({
                     message: `Product not found: ${item.name}`,
@@ -23,17 +32,26 @@ const placeOrder = async (req, res) => {
             }
             if (product.countInStock <= 0) {
                 return res.status(400).json({
-                    message: `Product is out of stock: ${item.name}`,
+                    message: `Product is out of stock: ${product.name}`,
                 });
             }
             if (product.countInStock < item.qty) {
                 return res.status(400).json({
-                    message: `Not enough stock available for ${item.name}`,
+                    message: `Not enough stock for ${product.name}. Available: ${product.countInStock}`,
                 });
             }
+            productDocs.push({ product, qty: item.qty });
         }
 
-        // 2. If online payment, cryptographically verify Razorpay signature before confirming
+        // 2. Recalculate totalPrice SERVER-SIDE from real DB prices (never trust client)
+        const subtotal = productDocs.reduce(
+            (acc, { product, qty }) => acc + product.price * qty,
+            0
+        );
+        const shippingFee = subtotal > 999 || subtotal === 0 ? 0 : 99;
+        const serverTotalPrice = subtotal + shippingFee;
+
+        // 3. If online payment, cryptographically verify Razorpay signature
         let isPaid = false;
         let paidAt = null;
 
@@ -59,43 +77,36 @@ const placeOrder = async (req, res) => {
             paidAt = Date.now();
         }
 
-        // 3. Atomically reduce countInStock for every ordered product
-        for (const item of orderItems) {
+        // 4. Atomically decrement countInStock for every ordered product
+        for (const { product, qty } of productDocs) {
             await Product.findByIdAndUpdate(
-                item.product || item._id,
-                { $inc: { countInStock: -item.qty } },
+                product._id,
+                { $inc: { countInStock: -qty } },
                 { new: true }
             );
         }
 
-        // Normalize orderItems for database mapping
-        const normalizedOrderItems = orderItems.map((item) => ({
-            name: item.name,
-            qty: item.qty,
-            image: item.image,
-            price: item.price,
-            product: item.product || item._id,
+        // 5. Normalize orderItems using DB-verified data (real prices from DB)
+        const normalizedOrderItems = productDocs.map(({ product, qty }) => ({
+            name: product.name,
+            qty,
+            image: product.image,
+            price: product.price,  // real DB price, NOT client-supplied
+            product: product._id,
         }));
 
         const order = await Order.create({
             user: req.user._id,
-
             orderItems: normalizedOrderItems,
-
             shippingAddress,
-
-            totalPrice,
-
+            totalPrice: serverTotalPrice,  // server-calculated, never from req.body
             paymentMethod: paymentMethod || "COD",
-
             isPaid,
-
             paidAt,
         });
 
         res.status(201).json({
             message: "Order Placed Successfully",
-
             order,
         });
     } catch (error) {
@@ -105,6 +116,7 @@ const placeOrder = async (req, res) => {
         });
     }
 };
+
 
 const getMyOrders = async (req, res) => {
     try {
