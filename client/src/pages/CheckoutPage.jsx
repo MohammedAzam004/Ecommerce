@@ -137,8 +137,8 @@ const CheckoutPage = () => {
         key,
         amount: order.amount,
         currency: order.currency,
-        name: "Azam Ecommerce",
-        description: "Test Transaction",
+        name: "ShopEsy",
+        description: "Secure Order Payment",
         order_id: order.id,
         handler: async function (response) {
           setLoading(true);

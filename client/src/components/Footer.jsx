@@ -2,13 +2,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ShoppingBag, Mail, Phone, MapPin, Shield, Send, ShieldCheck, Lock, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 const Footer = () => {
     const [showSafePaymentModal, setShowSafePaymentModal] = useState(false);
 
     const handleSubscribe = (e) => {
         e.preventDefault();
-        alert("Thank you for subscribing to our newsletter!");
+        toast.success("🎉 Thank you for subscribing to our newsletter!");
     };
 
     return (

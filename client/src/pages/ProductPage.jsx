@@ -26,7 +26,7 @@ const ProductPage = () => {
         try {
             const data = await getProductById(id);
             setProduct(data);
-            
+
             // Fetch related products dynamically by category
             if (data && data.category) {
                 const relatedData = await getProducts("", data.category, "", "", "");
@@ -49,6 +49,12 @@ const ProductPage = () => {
             fetchProduct();
         });
     }, [fetchProduct]);
+
+    useEffect(() => {
+        if (product && product.name) {
+            document.title = `${product.name} | ShopEsy`;
+        }
+    }, [product]);
 
     if (loading) {
         return <Loader text="Retrieving product details..." />;
@@ -125,7 +131,7 @@ const ProductPage = () => {
                             ? {
                                 ...item,
                                 qty: product.countInStock,
-                              }
+                            }
                             : item
                 );
                 setCartItems(updatedCart);
@@ -136,7 +142,7 @@ const ProductPage = () => {
                             ? {
                                 ...item,
                                 qty: newQty,
-                              }
+                            }
                             : item
                 );
                 setCartItems(updatedCart);
@@ -150,7 +156,7 @@ const ProductPage = () => {
                 },
             ]);
         }
-        
+
         navigate("/checkout");
     };
 
@@ -159,7 +165,7 @@ const ProductPage = () => {
         const stars = [];
         const fullStars = Math.floor(rating);
         const hasHalf = rating % 1 !== 0;
-        
+
         for (let i = 1; i <= 5; i++) {
             if (i <= fullStars) {
                 stars.push(<Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />);
@@ -181,14 +187,14 @@ const ProductPage = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col gap-16 bg-[#FAFAFA]">
-            
+
             {/* Split Product Main View: Image Gallery left, Buy panel right */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                
+
                 {/* 1. Large Product Gallery Image (Left Column - 55% Width on Desktop) */}
                 <div className="lg:col-span-7 flex flex-col gap-4">
                     <div className="relative aspect-square w-full rounded-2xl border border-slate-100 bg-white shadow-premium p-8 flex items-center justify-center overflow-hidden">
-                        
+
                         {/* Overlay Badge */}
                         <div className="absolute top-4 left-4 z-10">
                             {product.countInStock === 0 ? (
@@ -220,7 +226,7 @@ const ProductPage = () => {
                         <span className="text-[10px] font-bold uppercase tracking-widest text-black bg-zinc-100 border border-zinc-200 px-3 py-1 rounded-full w-fit">
                             {product.category || "General"}
                         </span>
-                        
+
                         <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-black leading-tight">
                             {product.name}
                         </h1>
@@ -255,7 +261,7 @@ const ProductPage = () => {
 
                     {/* Shopping Buy CTA Panel */}
                     <div className="p-6 rounded-2xl bg-white border border-slate-100 shadow-sm flex flex-col gap-5">
-                        
+
                         {/* Selector elements (Quantity drop-down) */}
                         {product.countInStock > 0 && (
                             <div className="flex items-center justify-between gap-4 border-b border-slate-50 pb-4">
@@ -320,7 +326,7 @@ const ProductPage = () => {
 
             {/* 3. Review Section Redesign */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 border-t border-slate-100 pt-12 items-start text-left">
-                
+
                 {/* Reviews List Column (7/12 Width) */}
                 <div className="lg:col-span-7 flex flex-col gap-6">
                     <div>

@@ -186,29 +186,22 @@ const createProductReview =
                 );
 
             if (product) {
-                const alreadyReviewed =
-                    product.reviews.find(
-                        (r) =>
-                            r.name ===
-                            req.user.name
-                    );
+                const alreadyReviewed = product.reviews.find(
+                    (r) =>
+                        (r.user && r.user.toString() === req.user._id.toString()) ||
+                        (!r.user && r.name === req.user.name)
+                );
 
-                if (
-                    alreadyReviewed
-                ) {
-                    return res
-                        .status(400)
-                        .json({
-                            message:
-                                "Already Reviewed",
-                        });
+                if (alreadyReviewed) {
+                    return res.status(400).json({
+                        message: "Already Reviewed",
+                    });
                 }
 
                 const review = {
-                    name:
-                        req.user.name,
-                    rating:
-                        Number(rating),
+                    user: req.user._id,
+                    name: req.user.name,
+                    rating: Number(rating),
                     comment,
                 };
 
