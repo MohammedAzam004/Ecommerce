@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
         const stars = [];
         const fullStars = Math.floor(rating);
         const hasHalf = rating % 1 !== 0;
-        
+
         for (let i = 1; i <= 5; i++) {
             if (i <= fullStars) {
                 stars.push(<Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />);
@@ -92,7 +92,7 @@ const ProductCard = ({ product }) => {
                     <div>
                         <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block mb-0.5">Price</span>
                         <span className="text-lg font-black text-slate-900">
-                             ₹{product.price.toLocaleString("en-IN")}
+                            ₹{product.price.toLocaleString("en-IN")}
                         </span>
                     </div>
 

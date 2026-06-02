@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
-import { ShoppingBag, Search, User, LogOut, Package, ShieldCheck, Menu, X, ChevronDown, XCircle, RotateCcw, Compass } from "lucide-react";
+import { ShoppingBag, Search, User, LogOut, Package, ShieldCheck, Menu, X, ChevronDown, XCircle, RotateCcw, Compass, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -181,14 +181,24 @@ const Navbar = () => {
                                                 </Link>
 
                                                 {userInfo.user?.isAdmin && (
-                                                    <Link
-                                                        to="/admin/dashboard"
-                                                        onClick={() => setDropdownOpen(false)}
-                                                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-bold text-black hover:bg-zinc-100 transition-all"
-                                                    >
-                                                        <ShieldCheck className="h-4 w-4 text-black" />
-                                                        <span>Admin Dashboard</span>
-                                                    </Link>
+                                                    <>
+                                                        <Link
+                                                            to="/admin/dashboard"
+                                                            onClick={() => setDropdownOpen(false)}
+                                                            className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-bold text-black hover:bg-zinc-100 transition-all"
+                                                        >
+                                                            <ShieldCheck className="h-4 w-4 text-black" />
+                                                            <span>Admin Dashboard</span>
+                                                        </Link>
+                                                        <Link
+                                                            to="/admin/banner"
+                                                            onClick={() => setDropdownOpen(false)}
+                                                            className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-bold text-black hover:bg-zinc-100 transition-all"
+                                                        >
+                                                            <Sparkles className="h-4 w-4 text-amber-500" />
+                                                            <span>Banner Showcase Lab</span>
+                                                        </Link>
+                                                    </>
                                                 )}
 
                                                 <button
@@ -345,14 +355,24 @@ const Navbar = () => {
                                 </Link>
 
                                 {userInfo.user?.isAdmin && (
-                                    <Link
-                                        to="/admin/dashboard"
-                                        onClick={() => setMobileOpen(false)}
-                                        className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-base font-bold text-black hover:bg-zinc-100 transition-all"
-                                    >
-                                        <ShieldCheck className="h-5 w-5 text-black" />
-                                        <span>Admin Panel</span>
-                                    </Link>
+                                    <>
+                                        <Link
+                                            to="/admin/dashboard"
+                                            onClick={() => setMobileOpen(false)}
+                                            className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-base font-bold text-black hover:bg-zinc-100 transition-all"
+                                        >
+                                            <ShieldCheck className="h-5 w-5 text-black" />
+                                            <span>Admin Panel</span>
+                                        </Link>
+                                        <Link
+                                            to="/admin/banner"
+                                            onClick={() => setMobileOpen(false)}
+                                            className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-base font-bold text-black hover:bg-zinc-100 transition-all"
+                                        >
+                                            <Sparkles className="h-5 w-5 text-amber-500" />
+                                            <span>Banner Showcase Lab</span>
+                                        </Link>
+                                    </>
                                 )}
 
                                 <button

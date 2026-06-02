@@ -19,7 +19,8 @@ import {
   ArrowUpRight,
   ArrowLeft,
   Settings,
-  RotateCcw
+  RotateCcw,
+  ImagePlay
 } from "lucide-react";
 
 const AdminDashboardPage = () => {
@@ -68,6 +69,7 @@ const AdminDashboardPage = () => {
     { title: "Orders", path: "/admin/orders", icon: <ShoppingBag className="h-4 w-4" /> },
     { title: "Returns", path: "/admin/returns", icon: <RotateCcw className="h-4 w-4" /> },
     { title: "Users", path: "/admin/users", icon: <Users className="h-4 w-4" /> },
+    { title: "Banners", path: "/admin/banner", icon: <ImagePlay className="h-4 w-4" /> },
   ];
 
   // Motion variants
@@ -323,7 +325,7 @@ const AdminDashboardPage = () => {
           )}
 
           {/* SaaS Navigation Modules Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
             {/* Manage Products Card */}
             <motion.div
@@ -405,6 +407,27 @@ const AdminDashboardPage = () => {
                 </h3>
                 <p className="text-xs text-slate-400 mt-2.5 leading-relaxed font-medium">
                   Review customer return tickets, inspect proof materials, and approve/reject refund authorizations.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Banner Management Card */}
+            <motion.div
+              variants={cardVariants}
+              whileHover={{ y: -4 }}
+              onClick={() => navigate("/admin/banner")}
+              className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm hover:shadow-md hover:border-slate-200/50 transition-all duration-300 flex flex-col justify-between items-start gap-4 text-left cursor-pointer group"
+            >
+              <div className="p-3.5 bg-violet-50 border border-violet-100 text-violet-500 rounded-2xl">
+                <ImagePlay className="h-6 w-6 stroke-[1.5]" />
+              </div>
+              <div>
+                <h3 className="font-extrabold text-slate-900 text-base flex items-center gap-1.5">
+                  <span>Banner Management</span>
+                  <ArrowUpRight className="h-4 w-4 text-slate-400 group-hover:text-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                </h3>
+                <p className="text-xs text-slate-400 mt-2.5 leading-relaxed font-medium">
+                  Edit homepage hero banners, replace showcase images, update text overlays, and manage banner status.
                 </p>
               </div>
             </motion.div>

@@ -2,6 +2,9 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import axios from "axios";
+import { API_BASE_URL } from "../utils/config";
+import DynamicShowcaseBanner from "./DynamicShowcaseBanner";
 
 const slides = [
     {
@@ -57,18 +60,70 @@ const slides = [
     },
 ];
 
+const categories = ["men", "women", "kids"];
+
+const getTitleParts = (title) => {
+    if (!title) return { main: "", highlight: "" };
+    const words = title.split(" ");
+    if (words.length <= 1) return { main: title, highlight: "" };
+    const highlight = words.pop();
+    const main = words.join(" ");
+    return { main, highlight };
+};
+
 const HeroBanner = () => {
     const [current, setCurrent] = useState(0);
+    const [banners, setBanners] = useState({});
+    const [loading, setLoading] = useState(true);
 
     const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
     const prev = useCallback(() => setCurrent((c) => (c - 1 + slides.length) % slides.length), []);
 
+    // Fetch all banners from database on mount
     useEffect(() => {
-        const timer = setInterval(next, 3800);
+        const fetchBanners = async () => {
+            try {
+                const { data } = await axios.get(`${API_BASE_URL}/api/banner`);
+                if (data && Array.isArray(data)) {
+                    const bannerMap = {};
+                    data.forEach((b) => {
+                        bannerMap[b.category] = b;
+                    });
+                    setBanners(bannerMap);
+                }
+            } catch (error) {
+                console.error("Error fetching banners for homepage Hero:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchBanners();
+    }, []);
+
+    // Slide rotation interval: Dynamic 20s if showcase is active, 6s fallback
+    useEffect(() => {
+        const currentCategory = categories[current];
+        const currentBanner = banners[currentCategory];
+        const isDynamic = currentBanner && currentBanner.isActive;
+        
+        const intervalTime = isDynamic ? 10000 : 6000;
+        const timer = setInterval(next, intervalTime);
         return () => clearInterval(timer);
-    }, [next]);
+    }, [next, current, banners]);
 
     const slide = slides[current];
+    const categoryKey = categories[current];
+    const banner = banners[categoryKey];
+    const hasActiveBanner = banner && banner.isActive;
+
+    // Map dynamic or hardcoded contents
+    const displayBadge = hasActiveBanner ? banner.subtitle : slide.badge;
+    const titleParts = hasActiveBanner 
+        ? getTitleParts(banner.title) 
+        : { main: slide.headline, highlight: slide.highlight };
+    const displaySub = hasActiveBanner ? banner.description : slide.sub;
+    const displayCta = hasActiveBanner ? banner.buttonText : slide.cta;
+    const displayLink = hasActiveBanner ? banner.buttonLink : slide.link;
 
     return (
         <div
@@ -99,7 +154,7 @@ const HeroBanner = () => {
                                     transition={{ delay: 0.08 }}
                                     className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border text-xs font-bold mb-2.5 ${slide.chipClass}`}
                                 >
-                                    {slide.badge}
+                                    {displayBadge}
                                 </motion.span>
 
                                 {/* Headline */}
@@ -109,9 +164,13 @@ const HeroBanner = () => {
                                     transition={{ delay: 0.15 }}
                                     className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-black text-black leading-[1.1] tracking-tight mb-2.5"
                                 >
-                                    {slide.headline}
-                                    <br />
-                                    <span className={slide.accentClass}>{slide.highlight}</span>
+                                    {titleParts.main}
+                                    {titleParts.highlight && (
+                                        <>
+                                            <br />
+                                            <span className={slide.accentClass}>{titleParts.highlight}</span>
+                                        </>
+                                    )}
                                 </motion.h1>
 
                                 {/* Sub-text */}
@@ -121,7 +180,7 @@ const HeroBanner = () => {
                                     transition={{ delay: 0.22 }}
                                     className="text-sm lg:text-base text-zinc-500 leading-relaxed mb-4 max-w-md"
                                 >
-                                    {slide.sub}
+                                    {displaySub}
                                 </motion.p>
 
                                 {/* CTAs */}
@@ -132,10 +191,10 @@ const HeroBanner = () => {
                                     className="flex items-center justify-center md:justify-start gap-3.5 flex-wrap"
                                 >
                                     <Link
-                                        to={slide.link}
+                                        to={displayLink}
                                         className={`${slide.ctaClass} font-bold text-sm px-8 py-3.5 rounded-full shadow-md transition-all duration-200 active:scale-95 flex items-center gap-2`}
                                     >
-                                        {slide.cta}
+                                        {displayCta}
                                         <ArrowRight className="h-4 w-4" />
                                     </Link>
                                     <Link
@@ -148,18 +207,22 @@ const HeroBanner = () => {
                             </div>{/* end text-left */}
                         </div>{/* end left column */}
 
-                        {/* Right: Product Image */}
-                        <div className="w-full md:flex-1 h-[260px] sm:h-[320px] md:h-full flex items-center justify-center md:justify-start overflow-hidden px-6 order-1 md:order-2">
-                            <motion.img
-                                key={slide.image}
-                                src={slide.image}
-                                alt={slide.highlight}
-                                initial={{ opacity: 0, scale: 0.97, x: 30 }}
-                                animate={{ opacity: 1, scale: 1, x: 0 }}
-                                transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.1 }}
-                                className="w-full h-full object-contain mix-blend-multiply"
-                                style={{ maxHeight: '85%' }}
-                            />
+                        {/* Right: Premium Dynamic Showcase or Fallback Image */}
+                        <div className="w-full md:flex-1 h-[320px] sm:h-[380px] md:h-full flex items-center justify-center overflow-visible px-4 order-1 md:order-2 relative mt-4 md:mt-0">
+                            {hasActiveBanner ? (
+                                <DynamicShowcaseBanner bannerData={banner} />
+                            ) : (
+                                <motion.img
+                                    key={slide.image}
+                                    src={slide.image}
+                                    alt={slide.highlight}
+                                    initial={{ opacity: 0, scale: 0.97, x: 30 }}
+                                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                                    transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.1 }}
+                                    className="w-full h-full object-contain mix-blend-multiply"
+                                    style={{ maxHeight: '85%' }}
+                                />
+                            )}
                         </div>
 
                     </div>{/* end responsive centered layout */}
