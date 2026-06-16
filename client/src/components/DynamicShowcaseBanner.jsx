@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles, RefreshCw } from "lucide-react";
+import { API_BASE_URL } from "../utils/config";
 
 const DynamicShowcaseBanner = ({ bannerData }) => {
     const [step, setStep] = useState(0); // 0 to 5 (0-4 are products, 5 is final model hero)
@@ -112,7 +113,7 @@ const DynamicShowcaseBanner = ({ bannerData }) => {
                             >
                                 <div className="w-full h-full bg-white/70 backdrop-blur-md rounded-3xl p-2.5 border border-white/90 flex items-center justify-center overflow-hidden">
                                     <img
-                                        src={img}
+                                        src={img && (img.startsWith("http") ? img : `${API_BASE_URL}${img}`)}
                                         alt={`Product piece ${idx + 1}`}
                                         className="w-full h-full object-contain mix-blend-multiply"
                                         onError={(e) => { e.target.src = "https://placehold.co/100x133/ffffff/a1a1aa?text=Image"; }}
@@ -157,7 +158,7 @@ const DynamicShowcaseBanner = ({ bannerData }) => {
                             <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/20 pointer-events-none z-10" />
 
                             <img
-                                src={bannerData.modelImage}
+                                src={bannerData.modelImage && (bannerData.modelImage.startsWith("http") ? bannerData.modelImage : `${API_BASE_URL}${bannerData.modelImage}`)}
                                 alt="Final Campaign Model"
                                 className="w-full h-full object-cover select-none"
                                 onError={(e) => { e.target.src = "https://placehold.co/300x400/f8fafc/a1a1aa?text=Styled+Model"; }}

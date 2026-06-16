@@ -22,7 +22,10 @@ app.use(helmet());
 
 // ─── CORS ────────────────────────────────────────────────────────────────────
 // CLIENT_URL must be set in .env — no localhost fallback in production
-const allowedOrigin = process.env.CLIENT_URL || "http://localhost:5173";
+let allowedOrigin = process.env.CLIENT_URL || "http://localhost:5173";
+if (allowedOrigin.endsWith("/")) {
+    allowedOrigin = allowedOrigin.slice(0, -1);
+}
 app.use(cors({
     origin: allowedOrigin,
     methods: ["GET", "POST", "PUT", "DELETE"],

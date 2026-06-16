@@ -351,7 +351,7 @@ const AdminBannerPage = () => {
                                         {/* Image preview thumbnail */}
                                         <div className="w-14 h-14 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center overflow-hidden shrink-0">
                                             {img.val ? (
-                                                <img src={img.val} alt={`Preview ${img.id}`} className="w-full h-full object-contain mix-blend-multiply" onError={(e) => { e.target.src = "https://placehold.co/100x133/f8fafc/a1a1aa?text=Error"; }} />
+                                                <img src={img.val.startsWith("http") ? img.val : `${API_BASE_URL}${img.val}`} alt={`Preview ${img.id}`} className="w-full h-full object-contain mix-blend-multiply" onError={(e) => { e.target.src = "https://placehold.co/100x133/f8fafc/a1a1aa?text=Error"; }} />
                                             ) : (
                                                 <Image className="h-5 w-5 text-slate-350" />
                                             )}
@@ -387,7 +387,7 @@ const AdminBannerPage = () => {
                                 {/* Large preview frame */}
                                 <div className="w-24 h-32 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center overflow-hidden shrink-0">
                                     {modelImage ? (
-                                        <img src={modelImage} alt="Model Preview" className="w-full h-full object-cover" onError={(e) => { e.target.src = "https://placehold.co/150x200/f8fafc/a1a1aa?text=Error"; }} />
+                                        <img src={modelImage.startsWith("http") ? modelImage : `${API_BASE_URL}${modelImage}`} alt="Model Preview" className="w-full h-full object-cover" onError={(e) => { e.target.src = "https://placehold.co/150x200/f8fafc/a1a1aa?text=Error"; }} />
                                     ) : (
                                         <Image className="h-8 w-8 text-slate-300 animate-pulse" />
                                     )}

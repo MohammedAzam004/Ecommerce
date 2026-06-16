@@ -54,7 +54,7 @@ function ScrollToTop() {
     // Update document title based on pathname
     let title = "ShopEsy | Premium Online Shopping";
     const path = pathname.toLowerCase();
-    
+
     if (path === "/about") title = "About Us | ShopEsy";
     else if (path === "/contact") title = "Contact Us | ShopEsy";
     else if (path === "/support") title = "Help Center | ShopEsy";
@@ -96,7 +96,7 @@ function ScrollToTop() {
     else if (path === "/admin/users") title = "Admin Users | ShopEsy";
     else if (path === "/admin/banner") title = "Admin Banners | ShopEsy";
     else if (path === "/admin/banner/edit") title = "Edit Banner | ShopEsy";
-    
+
     document.title = title;
 
     return () => clearTimeout(timer);
